@@ -79,3 +79,23 @@ a:hover {
 .articles-container>*:last-child {
   grid-column: 2 / span 2;
 }
+
+
+@media(max-width: 768px) {
+  .articles-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .articles-container>*:first-child,
+  .articles-container>*:last-child {
+    grid-template-columns: 1fr;
+    grid-column: 1;
+  }
+}
+
+
+@media(max-width: 600px) {
+  .articles-container {
+    grid-template-columns: 1fr;
+  }
+}

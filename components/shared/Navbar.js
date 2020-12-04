@@ -38,7 +38,7 @@ const Navbar = ({ classes, open, handleDrawerOpen }) => {
           </IconButton>
           <Typography className={classes.title} variant="h4" noWrap>
             <Link href="/">
-              <a className="text-decoration-none">Next-News</a>
+              <a className="text-decoration-none">News Provider</a>
             </Link>
           </Typography>
           <div className={classes.search}>
