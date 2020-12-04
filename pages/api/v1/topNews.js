@@ -11,7 +11,6 @@ export default async (req, res) => {
     return res.json(response.data);
   } else if (req.method === "POST") {
     let response;
-    console.log(req.body);
     if (
       (req.body.category && req.body.category !== "All") ||
       (req.body.page !== 1 && req.body.category !== "All")

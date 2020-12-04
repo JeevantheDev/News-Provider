@@ -82,7 +82,7 @@ export const getServerSideProps = async (context) => {
   state.title = countryCode;
   state.category = category;
   state.page = pageCount;
-
+  console.log(state);
   const allNews = await getAllNews(state);
   const totalNews = allNews.totalResults;
 
