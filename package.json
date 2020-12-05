@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
+    "start-dev": "cross-env NODE_ENV=production node server.js",
     "start": "next start"
   },
   "dependencies": {
@@ -15,6 +16,8 @@
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "country-list": "^2.2.0",
+    "cross-env": "^7.0.3",
+    "express": "^4.17.1",
     "link-preview-js": "^2.0.5",
     "moment": "^2.29.1",
     "next": "10.0.3",
