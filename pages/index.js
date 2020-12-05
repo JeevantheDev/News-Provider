@@ -13,8 +13,11 @@ import DropdownBtn from "../components/common/DropdownBtn";
 import CardHeadline from "../components/common/CardHeadline";
 import Link from "next/link";
 import TopTitle from "../components/shared/TopTitle";
+import { useRouter } from "next/router";
 
 export default function Home({ news }) {
+  const router = useRouter();
+
   const [countryCode, setCountryCode] = useState("in");
   const [category, setCategory] = useState("All");
   const [pageCount, setPageCount] = useState(1);
@@ -43,6 +46,15 @@ export default function Home({ news }) {
     setTopHeadlines(articles.slice(3, 10));
   };
 
+  const handleClickViewMore = (e) => {
+    e.preventDefault();
+    router.push(
+      `/topHeadlines/${
+        countryCode + "+" + category + "+" + parseInt(pageCount)
+      }`
+    );
+  };
+
   return (
     <Layout>
       <Head>
@@ -65,16 +77,12 @@ export default function Home({ news }) {
             />
           </TopTitle>
           <CardHeadline topHeadLines={topHeadLines} />
-          <Link
-            href="/topHeadlines/[country]"
-            as={`/topHeadlines/${
-              countryCode + "+" + category + "+" + parseInt(pageCount)
-            }`}
+          <Button
+            onClick={handleClickViewMore}
+            className="btn btn-light btn-lg btn-block my-3"
           >
-            <Button className="btn btn-light btn-lg btn-block my-3">
-              View More
-            </Button>
-          </Link>
+            View More
+          </Button>
         </div>
       </div>
     </Layout>
