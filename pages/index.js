@@ -49,9 +49,7 @@ export default function Home({ news }) {
   const handleClickViewMore = (e) => {
     e.preventDefault();
     router.push(
-      `/topHeadlines/${
-        countryCode + "+" + category + "+" + parseInt(pageCount)
-      }`
+      `/topHeadlines/${countryCode + "+" + category + "+" + pageCount}`
     );
   };
 

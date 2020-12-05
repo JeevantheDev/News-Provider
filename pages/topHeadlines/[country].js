@@ -75,13 +75,10 @@ export const getServerSideProps = async (context) => {
   const {
     query: { country },
   } = context;
-  const countryCode = country.split("+")[0];
-  const category = country.split("+")[1];
-  const pageCount = parseInt(country.split("+")[2]);
   const state = {};
-  state.title = countryCode;
-  state.category = category;
-  state.page = pageCount;
+  state.title = country.split("+")[0];
+  state.category = country.split("+")[1];
+  state.page = parseInt(country.split("+")[2]);
   console.log(state);
   const allNews = await getAllNews(state);
   const totalNews = allNews.totalResults;
