@@ -36,8 +36,8 @@ const SideBar = ({ classes, open, handleDrawerClose, theme }) => {
           <ListItem button key={text}>
             {text === "Top Headlines" && (
               <Link
-                href="/topHeadlines/[country]"
-                as={`/topHeadlines/in+All+${parseInt(1)}`}
+                href="/topHeadlines/[country]/[country]/[page]"
+                as={`/topHeadlines/in/All/${parseInt(1)}`}
               >
                 <a>
                   <ListItemText primary={text} />
