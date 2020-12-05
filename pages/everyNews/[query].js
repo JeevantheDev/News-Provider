@@ -86,7 +86,7 @@ export const getServerSideProps = async (context) => {
   const state = {};
   state.queryText = query;
   state.page = 1;
-
+  console.log(state);
   const allNews = await getEveryNews(state);
   const totalNews = allNews.totalResults;
   return {
