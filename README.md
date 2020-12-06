@@ -2,17 +2,24 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, got to https://newsapi.org/ create an api key then create a `.env.development.local` file in root of the project.
+
+Paste this with your api key:-
+
+```
+API_KEY=****************************
+BASE_URL=http://localhost:3000
+TOP_HEADLINES_URL=https://newsapi.org/v2/top-headlines
+EVERYTHING_URL=https://newsapi.org/v2/everything
+SOURCES_URL=https://newsapi.org/v2/sources
+```
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
 ## Learn More
 
