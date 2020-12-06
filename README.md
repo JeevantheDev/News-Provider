@@ -21,6 +21,20 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+### Screenshots
+
+`Home page`
+
+![home-page](/images/home.png)
+
+`View more page`
+
+![view-more](/images/more.png)
+
+`Search result page`
+
+![search-result](/images/search.png)
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
